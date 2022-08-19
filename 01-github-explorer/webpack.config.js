@@ -1,4 +1,5 @@
 const path = require('path') // importar usando required pois o webpack roda no node e o node entede apenas esse formato
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -10,6 +11,11 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public', 'index.html')
+        })
+    ],
     module: {
         rules: [
             {
