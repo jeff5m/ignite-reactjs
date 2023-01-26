@@ -1,3 +1,4 @@
+import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 
 export function Post(props) {
@@ -31,8 +32,7 @@ export function Post(props) {
           <a href="#">jane.design/doctorcare</a>
         </p>
         <p>
-          <a href="#">#novoprojeto</a>{" "}
-          <a href="#">#nlw</a>{" "}
+          <a href="#">#novoprojeto</a> <a href="#">#nlw</a>{" "}
           <a href="#">#rocketseat</a>
         </p>
       </div>
@@ -45,6 +45,12 @@ export function Post(props) {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
